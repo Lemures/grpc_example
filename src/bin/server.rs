@@ -59,7 +59,7 @@ impl FooBarService for FooBarServer {
 
 fn main() {
     let mut server = grpc::ServerBuilder::new_plain();
-    server.http.set_port(9001);
+    server.http.set_port(80);
     server.add_service(FooBarServiceServer::new_service_def(FooBarServer));
     server.http.set_cpu_pool_threads(4);
     let _server = server.build().expect("could not start server");

@@ -33,7 +33,7 @@ pub struct FooBarServiceClient {
     grpc_client: ::grpc::Client,
     method_record_cab_location: ::std::sync::Arc<::grpc::rt::MethodDescriptor<super::foobar::CabLocationRequest, super::foobar::CabLocationResponse>>,
     method_get_cabs: ::std::sync::Arc<::grpc::rt::MethodDescriptor<super::foobar::GetCabRequest, super::foobar::GetCabResponse>>,
-}
+}   
 
 impl FooBarServiceClient {
     pub fn with_client(grpc_client: ::grpc::Client) -> Self {

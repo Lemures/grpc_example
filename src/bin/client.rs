@@ -9,7 +9,7 @@ use grpc_example::foobar::*;
 
 fn main() {
     //create a client to talk to a fiven serfer
-    let client = FooBarServiceClient::new_plain("127.0.0.1", 9001, Default::default()).unwrap();
+    let client = FooBarServiceClient::new_plain("127.0.0.1", 80, Default::default()).unwrap();
 
     let mut req = CabLocationRequest::new();
     req.set_name("foo".to_string());
