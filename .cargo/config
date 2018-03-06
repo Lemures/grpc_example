@@ -1,2 +1,10 @@
 [target.armv7-unknown-linux-gnueabihf]
 #linker = "arm-linux-gnueabihf-gcc-4.7"
+
+[target.i686-pc-windows-gnu]
+linker = "/usr/bin/i686-w64-mingw32-gcc"
+rustflags = "-C panic=abort"
+
+[alias]
+wc = "build --target=i686-pc-windows-gnu --bin client"
+ws = "build --target=i686-pc-windows-gnu --bin server"
